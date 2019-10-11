@@ -1,0 +1,20 @@
+/*Given 2 int values greater than 0, return whichever value is nearest to 21 without going over. 
+Return 0 if they both go over.*/
+
+public int blackjack(int a, int b) {
+ return isCloser(a,b);
+  
+}
+public int noBig(int a) {
+  if (a<=21)
+  return a;
+  else return 0;
+}
+
+public int isCloser(int a, int b) {
+  if (noBig(a)==0 && noBig(b)==0)
+  return 0;
+  else if (noBig(a)>=noBig(b))
+  return a;
+  else return b;
+}
